@@ -1,5 +1,5 @@
 export interface CardProps {
-  id: string;
+  name: string;
 }
 
 export interface ButtonProps

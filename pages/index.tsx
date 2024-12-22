@@ -1,3 +1,5 @@
+import Card from '@/components/common/Card';
+import { PROPERTYLISTINGSAMPLE } from '@/constants';
 import localFont from 'next/font/local';
 
 const geistSans = localFont({
@@ -14,7 +16,16 @@ const geistMono = localFont({
 export default function Home() {
   return (
     <main>
-      <h1>Alx listing app</h1>
+      <div>
+        <h1>“Find your favorite place here!</h1>
+        <p>The best prices for over 2 million properties worldwide.</p>
+      </div>
+
+      <div>
+        {PROPERTYLISTINGSAMPLE.map((property) => (
+          <Card key={property.name} name={property.name} />
+        ))}
+      </div>
     </main>
   );
 }
