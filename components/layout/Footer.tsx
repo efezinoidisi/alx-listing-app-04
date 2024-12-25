@@ -3,8 +3,8 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer>
-      <div>
+    <footer className='bg-[#222222] before:content-[""] relative before:absolute before:-top-7 before:h-[1.8125rem] before:w-full before:bg-primary text-[#CACACA] px-6 before:inset-x-0 py-6 text-xs md:text-base mt-8 md:px-[7.25rem] md:py-11 lg:px-14 lg:py-9'>
+      <div className='xl:grid xl:grid-cols-[40.0282rem_1fr] w-full xl:gap-32'>
         <div>
           <svg
             width='60'
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             />
           </svg>
 
-          <p>
+          <p className='mt-10 mb-8 font-medium md:mb-16'>
             ALX is a platform where travelers can discover and book unique,
             comfortable, and affordable lodging options worldwide. From cozy
             city apartments and tranquil countryside retreats to exotic
@@ -44,44 +44,53 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        <FooterCard
-          title='Explore'
-          links={[
-            { name: 'Apartments in Dubai', href: '' },
-            { name: 'Hotels in New York', href: '' },
-            { name: 'Villa in Spain', href: '' },
-            { name: 'Mansion in indonesia', href: '' },
-          ]}
-        />
-        <FooterCard
-          title='Company'
-          links={[
-            { name: 'About us', href: '' },
-            { name: 'Blog', href: '' },
-            { name: 'Career', href: '' },
-            { name: 'Customers', href: '' },
-            { name: 'Brand', href: '' },
-          ]}
-        />
-        <FooterCard
-          title='Help'
-          links={[
-            { name: 'Support', href: '' },
-            { name: 'Cancel booking', href: '' },
-            { name: 'Refunds Process', href: '' },
-          ]}
-        />
+        <div className='grid grid-cols-[1fr_auto] place-content-between w-full px-3 md:flex md:justify-between md:px-0 md:gap-24'>
+          <FooterCard
+            title='Explore'
+            links={[
+              { name: 'Apartments in Dubai', href: '' },
+              { name: 'Hotels in New York', href: '' },
+              { name: 'Villa in Spain', href: '' },
+              { name: 'Mansion in indonesia', href: '' },
+            ]}
+          />
+          <FooterCard
+            title='Company'
+            links={[
+              { name: 'About us', href: '' },
+              { name: 'Blog', href: '' },
+              { name: 'Career', href: '' },
+              { name: 'Customers', href: '' },
+              { name: 'Brand', href: '' },
+            ]}
+          />
+          <FooterCard
+            title='Help'
+            links={[
+              { name: 'Support', href: '' },
+              { name: 'Cancel booking', href: '' },
+              { name: 'Refunds Process', href: '' },
+            ]}
+          />
+        </div>
       </div>
-      <div className='flex flex-col'>
-        <p>
+
+      <hr className='opacity-[0.09] mt-24 mb-[1.125rem] md:mt-14 md:mb-11' />
+      <div className='flex flex-col xl:flex-row xl:items-center xl:justify-between'>
+        <p className='text-center font-medium leading-7'>
           Some hotel requires you to cancel more than 24 hours before check-in.
-          Details here
+          Details{' '}
+          <Link href={''} className='text-primary'>
+            here
+          </Link>
         </p>
-        <div className='flex flex-wrap'>
+        <div className='flex font-medium mt-8 mb-10 items-center justify-center gap-5 md:mb-0 xl:m-0'>
           <Link href={''}>Terms of Service</Link>
           <Link href={''}>Policy service</Link>
           <Link href={''}>Cookies Policy</Link>
-          <Link href={''}>Partners</Link>
+          <Link href={''} className='hidden lg:inline-block'>
+            Partners
+          </Link>
         </div>
       </div>
     </footer>
@@ -96,13 +105,13 @@ function FooterCard({
   links: { href: string; name: string }[];
 }) {
   return (
-    <div>
-      <h5>{title}</h5>
+    <div className='space-y-[1.125rem]'>
+      <h5 className='font-semibold text-base md:text-[1.5625rem]'>{title}</h5>
 
-      <ul>
+      <ul className='flex flex-col gap-[0.5625rem]'>
         {links.map((link) => {
           return (
-            <li key={link.name}>
+            <li key={link.name} className=''>
               <Link href={link.href}>{link.name}</Link>
             </li>
           );
