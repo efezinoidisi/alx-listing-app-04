@@ -1,3 +1,4 @@
+import Icons from '@/components/common/Icons';
 import { PillProps, PropertyProps } from '@/interfaces';
 
 export const API_URL = '';
@@ -10,76 +11,76 @@ export const appData = {
 export const ACCOMMODATION_TYPES: PillProps[] = [
   {
     name: 'Rooms',
-    image: '',
+    image: Icons.rooms,
   },
   {
     name: 'Mansion',
-    image: '',
+    image: Icons.mansion,
   },
   {
     name: 'Countryside',
-    image: '',
+    image: Icons.countryside,
   },
   {
     name: 'Villa',
-    image: '',
+    image: Icons.villa,
   },
   {
     name: 'Tropical',
-    image: '',
+    image: Icons.tropical,
   },
   {
     name: 'New',
-    image: '',
+    image: Icons.new,
   },
   {
     name: 'Amazing pool',
-    image: '',
+    image: Icons.pool,
   },
   {
     name: 'Beach house',
-    image: '',
+    image: Icons.beach,
   },
   {
     name: 'Island',
-    image: '',
+    image: Icons.island,
   },
   {
     name: 'Camping',
-    image: '',
+    image: Icons.camping,
   },
   {
     name: 'Apartment',
-    image: '',
+    image: Icons.apartment,
   },
   {
     name: 'House',
-    image: '',
+    image: Icons.house,
   },
   {
     name: 'Lakefront',
-    image: '',
+    image: Icons.lakefront,
   },
   {
     name: 'Farm house',
-    image: '',
+    image: Icons.farm,
   },
   {
     name: 'Treehouse',
-    image: '',
+    image: Icons.treehouse,
   },
   {
     name: 'Cabins',
-    image: '',
+    image: Icons.cabin,
   },
   {
     name: 'Castles',
-    image: '',
+    image: Icons.castles,
   },
-  {
-    name: 'Lakeside',
-    image: '',
-  },
+  // {
+  //   name: 'Lakeside',
+  //   image: '',
+  // },
 ];
 
 export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
@@ -444,3 +445,5 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
     discount: '',
   },
 ];
+
+export const ICON_SIZE = 20;

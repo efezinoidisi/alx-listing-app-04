@@ -72,12 +72,12 @@ const Footer: React.FC = () => {
           ]}
         />
       </div>
-      <div>
+      <div className='flex flex-col'>
         <p>
           Some hotel requires you to cancel more than 24 hours before check-in.
           Details here
         </p>
-        <div>
+        <div className='flex flex-wrap'>
           <Link href={''}>Terms of Service</Link>
           <Link href={''}>Policy service</Link>
           <Link href={''}>Cookies Policy</Link>

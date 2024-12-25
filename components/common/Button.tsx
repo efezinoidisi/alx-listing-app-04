@@ -8,7 +8,11 @@ export default function Button({
   ...otherProps
 }: ButtonProps) {
   return (
-    <button type={type} className={cn('', className)} {...otherProps}>
+    <button
+      {...otherProps}
+      type={type}
+      className={cn('flex items-center gap-1 w-fit', className)}
+    >
       {children}
     </button>
   );

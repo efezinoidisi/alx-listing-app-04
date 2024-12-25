@@ -28,6 +28,10 @@ export default {
         60: '60px',
         70: '70px',
       },
+      padding: {
+        21: '21px',
+        60: '60px',
+      },
     },
   },
   plugins: [],

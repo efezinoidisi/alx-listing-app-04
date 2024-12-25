@@ -5,13 +5,17 @@ import Button from './Button';
 const Pill: React.FC<{
   pill: PillProps;
   handleClick: () => void;
-}> = ({ pill: { name }, handleClick }) => {
+}> = ({ pill: { name, image: Icon }, handleClick }) => {
   const handlePillClick = () => {
     handleClick();
   };
   return (
-    <Button onClick={handlePillClick} className='py-4 text-nowrap'>
-      <span>{name}</span>
+    <Button
+      onClick={handlePillClick}
+      className='py-4 text-nowrap flex-col group'
+    >
+      <Icon />
+      <span className='text-[#616161] font-medium text-xs'>{name}</span>
     </Button>
   );
 };
