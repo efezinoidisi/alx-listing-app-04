@@ -17,3 +17,14 @@ export function formatDate(
 
   return date.toLocaleDateString('en-US', options);
 }
+
+export function formatCurrency(
+  value: number,
+  options: Intl.NumberFormatOptions = {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+  }
+) {
+  return value.toLocaleString('en-US', options);
+}

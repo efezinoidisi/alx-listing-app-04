@@ -20,10 +20,12 @@ export default {
           300: '#f6f6f6',
           400: '#ECECEC',
           500: '#EBEBEB',
+          600: '#EDEDED',
         },
         primary: '#34967C',
       },
       borderRadius: {
+        30: '30px',
         50: '50px',
         60: '60px',
         70: '70px',
@@ -31,6 +33,13 @@ export default {
       padding: {
         21: '21px',
         60: '60px',
+      },
+      backgroundImage: {
+        hero: 'url("/assets/images/hero.webp")',
+      },
+      fontFamily: {
+        'quick-sand': ['var(--quick-sand)'],
+        'source-sans': ['var(--source-sans)'],
       },
     },
   },

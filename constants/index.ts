@@ -1,5 +1,5 @@
 import Icons from '@/components/common/Icons';
-import { PillProps, PropertyProps } from '@/interfaces';
+import { PropertyProps } from '@/interfaces';
 
 export const API_URL = '';
 
@@ -8,7 +8,7 @@ export const appData = {
   description: 'The best prices for over 2 million properties worldwide',
 };
 
-export const ACCOMMODATION_TYPES: PillProps[] = [
+export const ACCOMMODATION_TYPES = [
   {
     name: 'Rooms',
     image: Icons.rooms,
@@ -447,3 +447,13 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
 ];
 
 export const ICON_SIZE = 20;
+
+export const FILTERS = [
+  'All',
+  'Top Villa',
+  'Free Reschedule',
+
+  'Book Now, Pay later',
+  'Self Checkin',
+  'Instant Book',
+];

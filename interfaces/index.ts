@@ -4,6 +4,17 @@ import { DateObject } from 'react-multi-date-picker';
 
 export interface CardProps {
   name: string;
+  address: {
+    state: string;
+    city: string;
+    country: string;
+  };
+  rating: number;
+  category: string[];
+  price: number;
+  offers: Offer;
+  image: string;
+  discount: string;
 }
 
 export interface ButtonProps
@@ -32,7 +43,9 @@ export interface PropertyProps {
 
 export interface PillProps {
   name: string;
-  image: (props: IconProps) => JSX.Element;
+  image?: (props: IconProps) => JSX.Element;
+  handleClick: () => void;
+  className?: string;
 }
 
 export interface MobileSearchBarProps {
@@ -48,4 +61,14 @@ export interface HeaderSearchValues {
   location: string;
   dates: [string, string];
   people: string;
+}
+
+export interface RatingProps {
+  rating: number;
+}
+
+export interface Offer {
+  bed: string;
+  occupants: string;
+  shower: string;
 }

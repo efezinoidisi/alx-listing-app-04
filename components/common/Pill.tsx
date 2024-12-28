@@ -1,21 +1,27 @@
 import { PillProps } from '@/interfaces';
+import { cn } from '@/utils/utils';
 import React from 'react';
 import Button from './Button';
 
-const Pill: React.FC<{
-  pill: PillProps;
-  handleClick: () => void;
-}> = ({ pill: { name, image: Icon }, handleClick }) => {
+const Pill: React.FC<PillProps> = ({
+  name,
+  image: Icon,
+  handleClick,
+  className = '',
+}) => {
   const handlePillClick = () => {
     handleClick();
   };
   return (
     <Button
       onClick={handlePillClick}
-      className='py-4 text-nowrap flex-col group'
+      className={cn(
+        'py-4 text-nowrap flex-col group text-[#616161] font-medium text-xs',
+        className
+      )}
     >
-      <Icon />
-      <span className='text-[#616161] font-medium text-xs'>{name}</span>
+      {Icon ? <Icon /> : null}
+      <span className=''>{name}</span>
     </Button>
   );
 };

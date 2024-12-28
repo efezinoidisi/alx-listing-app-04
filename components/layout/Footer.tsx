@@ -3,8 +3,8 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='bg-[#222222] before:content-[""] relative before:absolute before:-top-7 before:h-[1.8125rem] before:w-full before:bg-primary text-[#CACACA] px-6 before:inset-x-0 py-6 text-xs md:text-base mt-8 md:px-[7.25rem] md:py-11 lg:px-14 lg:py-9'>
-      <div className='xl:grid xl:grid-cols-[40.0282rem_1fr] w-full xl:gap-32'>
+    <footer className='bg-[#222222] before:content-[""] relative before:absolute before:-top-7 before:h-[1.8125rem] before:w-full before:bg-primary text-[#CACACA] px-6 before:inset-x-0 py-6 text-xs md:text-base mt-20 md:px-[7.25rem] md:py-11 lg:px-14 lg:py-9'>
+      <div className='xl:flex w-full xl:gap-32'>
         <div>
           <svg
             width='60'
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             />
           </svg>
 
-          <p className='mt-10 mb-8 font-medium md:mb-16'>
+          <p className='mt-10 mb-8 font-medium md:mb-16 max-xl:max-w-[40rem]'>
             ALX is a platform where travelers can discover and book unique,
             comfortable, and affordable lodging options worldwide. From cozy
             city apartments and tranquil countryside retreats to exotic
@@ -76,15 +76,15 @@ const Footer: React.FC = () => {
       </div>
 
       <hr className='opacity-[0.09] mt-24 mb-[1.125rem] md:mt-14 md:mb-11' />
-      <div className='flex flex-col xl:flex-row xl:items-center xl:justify-between'>
-        <p className='text-center font-medium leading-7'>
+      <div className='flex flex-col xl:flex-row xl:items-center xl:justify-between xl:gap-3'>
+        <p className='text-center font-medium leading-7 xl:text-left'>
           Some hotel requires you to cancel more than 24 hours before check-in.
           Details{' '}
           <Link href={''} className='text-primary'>
             here
           </Link>
         </p>
-        <div className='flex font-medium mt-8 mb-10 items-center justify-center gap-5 md:mb-0 xl:m-0'>
+        <div className='flex font-medium mt-8 mb-10 items-center justify-center gap-2 md:gap-5 md:mb-0 xl:m-0'>
           <Link href={''}>Terms of Service</Link>
           <Link href={''}>Policy service</Link>
           <Link href={''}>Cookies Policy</Link>
