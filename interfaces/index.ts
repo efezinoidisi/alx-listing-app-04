@@ -39,6 +39,7 @@ export interface PropertyProps {
   };
   image: string;
   discount: string;
+  description: string;
 }
 
 export interface PillProps {
@@ -71,4 +72,13 @@ export interface Offer {
   bed: string;
   occupants: string;
   shower: string;
+}
+
+export interface Review {
+  id: number;
+  name: string;
+  dateJoined: string;
+  review: string;
+  createdAt: string;
+  tag: string;
 }
