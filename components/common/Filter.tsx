@@ -9,8 +9,7 @@ import Pill from './Pill';
 const Filter: React.FC<{
   currentFilter: string;
   changeCurrentFilter: (value: string) => void;
-  type?: 'sm' | 'lg';
-}> = ({ currentFilter, changeCurrentFilter, type = 'lg' }) => {
+}> = ({ currentFilter, changeCurrentFilter }) => {
   const [showDropdown, toggleDropdown] = useToggle();
 
   return (
@@ -24,7 +23,7 @@ const Filter: React.FC<{
               name={filter}
               handleClick={() => changeCurrentFilter(filter)}
               className={cn(
-                'border py-[10px] px-6 rounded-[30px] border-grey-200 font-semibold xl:text-lg 2xl:text-[1.1875rem]',
+                'border py-2 md:py-[10px] px-4 md:px-6 rounded-[30px] border-grey-200 font-semibold xl:text-lg 2xl:text-[1.1875rem]',
                 isActiveFilter && 'border-primary bg-[#F0FFFB]'
               )}
             />

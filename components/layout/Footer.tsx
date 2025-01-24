@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='bg-[#222222] before:content-[""] relative before:absolute before:-top-7 before:h-[1.8125rem] before:w-full before:bg-primary text-[#CACACA] px-6 before:inset-x-0 py-6 text-xs md:text-base mt-20 md:px-[7.25rem] md:py-11 lg:px-14 lg:py-9'>
+    <footer className='bg-[#222222] before:content-[""] relative before:absolute before:-top-7 before:h-[1.8125rem] before:w-full before:bg-primary text-[#CACACA] px-6 before:inset-x-0 py-6 text-xs md:text-base mt-20 md:px-[7.25rem] md:py-11 lg:px-14 lg:py-9 overflow-hidden'>
       <div className='xl:flex w-full xl:gap-32'>
         <div>
           <svg
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
             here
           </Link>
         </p>
-        <div className='flex font-medium mt-8 mb-10 items-center justify-center gap-2 md:gap-5 md:mb-0 xl:m-0'>
+        <div className='flex font-medium flex-wrap md:flex-nowrap mt-8 mb-10 items-center justify-center gap-2 md:gap-5 md:mb-0 xl:m-0'>
           <Link href={''}>Terms of Service</Link>
           <Link href={''}>Policy service</Link>
           <Link href={''}>Cookies Policy</Link>

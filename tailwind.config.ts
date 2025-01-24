@@ -41,6 +41,11 @@ export default {
         'quick-sand': ['var(--quick-sand)'],
         'source-sans': ['var(--source-sans)'],
       },
+      fontSize: {
+        22: '22px',
+        39: '39px',
+        50: '50px',
+      },
     },
   },
   plugins: [],

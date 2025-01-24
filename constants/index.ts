@@ -88,10 +88,45 @@ export const REVIEWS: Review[] = [
     id: 0,
     name: 'John doe',
     dateJoined: '04-05-2024',
-    review:
+    comment:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illo sit mollitia iure quia adipisci esse deleniti ullam vitae nihil?',
     createdAt: '01-01-2025',
-    tag: '',
+    tag: 'Family trip',
+    rating: 3,
+    avatar: '/assets/images/avatar.webp',
+  },
+  {
+    id: 1,
+    name: 'Ava Doe',
+    dateJoined: '04-05-2024',
+    comment:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illo sit mollitia iure quia adipisci esse deleniti ullam vitae nihil?',
+    createdAt: '01-01-2025',
+    tag: 'Family trip',
+    rating: 4,
+    avatar: '/assets/images/avatar.webp',
+  },
+  {
+    id: 2,
+    name: 'Penelope Black',
+    dateJoined: '04-05-2024',
+    comment:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illo sit mollitia iure quia adipisci esse deleniti ullam vitae nihil?',
+    createdAt: '01-01-2025',
+    tag: 'Family trip',
+    rating: 3.7,
+    avatar: '/assets/images/avatar.webp',
+  },
+  {
+    id: 3,
+    name: 'Max Drew',
+    dateJoined: '04-05-2024',
+    comment:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illo sit mollitia iure quia adipisci esse deleniti ullam vitae nihil?',
+    createdAt: '01-01-2025',
+    tag: 'Family trip',
+    rating: 5,
+    avatar: '/assets/images/avatar.webp',
   },
 ];
 
@@ -111,10 +146,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '4-6',
     },
-    image: 'https://example.com/image1.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Mountain Escape Chalet',
@@ -131,10 +167,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '5-7',
     },
-    image: 'https://example.com/image2.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '30',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Cozy Desert Retreat',
@@ -151,10 +188,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '1',
       occupants: '2-3',
     },
-    image: 'https://example.com/image3.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'City Lights Penthouse',
@@ -171,10 +209,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '2-4',
     },
-    image: 'https://example.com/image4.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '15',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Riverside Cabin',
@@ -191,10 +230,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '4-6',
     },
-    image: 'https://example.com/image5.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '20',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Modern Beachfront Villa',
@@ -211,10 +251,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '4',
       occupants: '8-10',
     },
-    image: 'https://example.com/image6.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Lakeside Chalet',
@@ -231,10 +272,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '4-5',
     },
-    image: 'https://example.com/image7.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '10',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Tropical Garden Villa',
@@ -251,10 +293,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '5-6',
     },
-    image: 'https://example.com/image8.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '25',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Urban Loft',
@@ -271,10 +314,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '1',
       occupants: '2-3',
     },
-    image: 'https://example.com/image9.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Secluded Forest Cabin',
@@ -291,10 +335,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '5-7',
     },
-    image: 'https://example.com/image10.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '40',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Cliffside Villa',
@@ -311,10 +356,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '4',
       occupants: '6-8',
     },
-    image: 'https://example.com/image11.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '50',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Coastal Escape Villa',
@@ -331,10 +377,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '4-6',
     },
-    image: 'https://example.com/image12.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Historical Villa',
@@ -351,10 +398,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '2-4',
     },
-    image: 'https://example.com/image13.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '35',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Downtown Apartment',
@@ -371,10 +419,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '1',
       occupants: '2',
     },
-    image: 'https://example.com/image14.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Luxury Safari Lodge',
@@ -391,10 +440,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '4',
       occupants: '6-8',
     },
-    image: 'https://example.com/image15.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '20',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Countryside Cottage',
@@ -411,10 +461,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '1',
       occupants: '2-4',
     },
-    image: 'https://example.com/image16.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '25',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Riverfront Mansion',
@@ -431,10 +482,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '6-8',
     },
-    image: 'https://example.com/image17.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '30',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Ski Chalet',
@@ -451,10 +503,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '4-5',
     },
-    image: 'https://example.com/image18.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Island Paradise Villa',
@@ -471,10 +524,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '5',
       occupants: '8-10',
     },
-    image: 'https://example.com/image19.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '60',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
   {
     name: 'Clifftop Retreat',
@@ -491,10 +545,11 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '4-5',
     },
-    image: 'https://example.com/image20.jpg',
+    image: '/assets/images/placeholder.svg',
     discount: '',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat autem ab ad nemo doloribus deleniti veniam corporis sint impedit sit alias reiciendis, similique voluptates modi assumenda accusamus aut, aliquam voluptate? Quibusdam quisquam eius ipsum iusto veritatis dolores, aut fuga nesciunt laudantium repudiandae modi corrupti quis officiis praesentium velit sit!',
+    reviews: REVIEWS,
   },
 ];
 

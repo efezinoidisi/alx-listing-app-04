@@ -40,6 +40,7 @@ export interface PropertyProps {
   image: string;
   discount: string;
   description: string;
+  reviews: Review[];
 }
 
 export interface PillProps {
@@ -78,7 +79,18 @@ export interface Review {
   id: number;
   name: string;
   dateJoined: string;
-  review: string;
+  comment: string;
   createdAt: string;
   tag: string;
+  avatar: string;
+  rating: number;
+}
+
+export interface PropertyTitleProps {
+  name: string;
+  rating: number;
+  reviewsLength: number;
+  city: string;
+  country: string;
+  className?: string;
 }
