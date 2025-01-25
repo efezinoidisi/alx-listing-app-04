@@ -15,7 +15,7 @@ const ReviewSection: React.FC<{ reviews: Review[]; rating: number }> = ({
 
         <span className='text-[#929292]'>{`(${reviews.length} reviews)`}</span>
       </div>
-      <div className='grid md:grid-cols-2 gap-y-10 gap-x-5'>
+      <div className='grid md:grid-cols-2 md:w-fit  gap-y-10 gap-x-5'>
         {reviews.map((review, index) => {
           const timeAgo = formatDistance(
             new Date(),
@@ -24,7 +24,7 @@ const ReviewSection: React.FC<{ reviews: Review[]; rating: number }> = ({
 
           const datePosted = format(new Date(review.createdAt), 'MMMM yyyy');
           return (
-            <div key={index} className='pb-4 mb-4'>
+            <div key={index} className='pb-4 mb-4 max-w-[250.14px]'>
               <div className='flex items-center'>
                 <Image
                   src={review.avatar}

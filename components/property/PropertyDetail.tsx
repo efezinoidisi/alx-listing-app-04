@@ -71,8 +71,8 @@ const PropertyDetail: React.FC<{
         type='detail'
       />
 
-      <div className='relative md:flex md:gap-10 mt-11'>
-        <div className='md:w-3/5'>
+      <div className='relative md:flex md:gap-10 mt-11 w-full lg:gap-16 xl:gap-20'>
+        <div className='md:w-3/5 lg:w-full'>
           {/* Description */}
           <div className='px-21 md:px-0 scroll-mt-20' id='Description'>
             <Tabs />

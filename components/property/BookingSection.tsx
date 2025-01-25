@@ -13,17 +13,30 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
 
   const isNotMobileDevice = useMediaQuery('(min-width: 768px)');
 
+  const isDatesValid = dates.every((val) => val);
+
   const numberOfDays =
-    (dates[1] && dates[0] && differenceInCalendarDays(dates[1], dates[0])) || 0;
+    (isDatesValid && differenceInCalendarDays(dates[1], dates[0])) || 0;
+
+  const weeklyDiscounts = 100;
+
+  const serviceFee = 90;
+
+  const totalDaysCharge = price * numberOfDays;
+
+  const total = totalDaysCharge
+    ? totalDaysCharge + serviceFee - weeklyDiscounts
+    : price;
 
   return (
-    <div className='bg-white p-4 shadow-md fixed bottom-0 z-50 w-full flex items-center justify-between md:flex-col border-t border-[#C5C5C5] md:sticky md:top-5 md:w-2/5 md:h-fit md:bottom-auto md:border-none md:rounded-[13px]'>
-      <div>
-        <h3 className='text-xl font-semibold'>
+    <div className='bg-white p-4 shadow-md fixed bottom-0 z-50 w-full flex items-center justify-between md:flex-col border-t border-[#C5C5C5] md:sticky md:top-5 md:w-2/5 md:h-fit md:bottom-auto md:border-none md:rounded-[13px] md:max-w-96 lg:max-w-md md:items-start'>
+      <div className='w-full'>
+        <h3 className='text-xl md:text-2xl font-bold'>
           ${price}
-          <sub>/night</sub>
+          <sub className='text-[#8E8E8E]'>/night</sub>
         </h3>
-        <div className=''>
+        <hr className='hidden md:block md:border-[#E6E6E6] my-5' />
+        <div className='w-full'>
           <DatePicker
             value={dates}
             onChange={(dateObj) => {
@@ -38,12 +51,15 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
               const to = values[1] || '';
 
               return (
-                <Button onClick={openCalendar} className='flex-col pr-5'>
-                  <span className='text-secondary-100 hidden md:inline'>
+                <Button
+                  onClick={openCalendar}
+                  className='flex-col w-full items-start gap-2'
+                >
+                  <span className='text-secondary-100 hidden md:inline font-bold text-lg'>
                     Check in
                   </span>
 
-                  <span className='text-grey-100'>
+                  <span className='text-grey-100 md:border border-grey-700 inline-block w-full py-2 text-left px-2 rounded-md'>
                     {value
                       ? `${formatDate(from, {
                           month: 'short',
@@ -67,7 +83,7 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
           />
         </div>
 
-        <div className='hidden md:block'>
+        <div className='hidden md:block mt-6 mb-5'>
           <DatePicker
             value={dates}
             onChange={(dateObj) => {
@@ -80,9 +96,14 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
               const to = values[1] || '';
 
               return (
-                <Button onClick={openCalendar} className='flex-col pr-5'>
-                  <span className='text-secondary-100'>Check out</span>
-                  <span className='text-grey-100'>
+                <Button
+                  onClick={openCalendar}
+                  className='flex-col w-full items-start gap-2'
+                >
+                  <span className='text-secondary-100 font-bold text-lg'>
+                    Check out
+                  </span>
+                  <span className='text-grey-100 border border-grey-700 inline-block w-full py-2 text-left px-2 rounded-md'>
                     {to
                       ? `${formatDate(to, {
                           month: 'short',
@@ -99,18 +120,41 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
           />
         </div>
 
+        {numberOfDays ? (
+          <div className='space-y-4'>
+            <p className='flex items-center justify-between w-full font-bold text-sm lg:text-lg'>
+              <span className='text-[#8F8F8F]'>{`$${price} x ${numberOfDays} nights`}</span>
+              <strong>{`$${totalDaysCharge}`}</strong>
+            </p>
+
+            <p className='flex items-center justify-between w-full text-sm font-bold lg:text-lg'>
+              <span className='text-[#8F8F8F]'>Weekly discounts</span>
+
+              <strong>{`-$${weeklyDiscounts}`}</strong>
+            </p>
+
+            <p className='flex items-center justify-between w-full text-sm md:text-lg font-bold'>
+              <span className='text-[#8F8F8F]'>Service fee</span>
+              <strong>{`$${serviceFee}`}</strong>
+            </p>
+          </div>
+        ) : null}
+
+        <hr className='hidden md:block md:border-[#E6E6E6] mt-14 mb-2' />
+
         {/* Total payment */}
         <div className='mt-4 hidden md:block'>
-          <p>
-            Total payment: <strong>${price * 7}</strong>
+          <p className='flex items-center justify-between w-full font-bold text-sm lg:text-lg'>
+            <span className='text-[#8F8F8F]'>Total payment: </span>
+            <strong className='text-primary'>${total}</strong>
           </p>
         </div>
       </div>
 
       {/* Reserve button */}
-      <button className='mt-4 bg-green-500 text-white py-2 px-4 rounded-md'>
+      <Button className='mt-4 bg-green-500 text-white py-2 px-4 rounded-md md:w-full justify-center'>
         Reserve now
-      </button>
+      </Button>
     </div>
   );
 };

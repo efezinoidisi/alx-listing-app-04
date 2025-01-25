@@ -22,7 +22,7 @@ const Tabs: React.FC = () => {
             onClick={() => handleScrollToSection(tab)}
             key={tab}
             className={cn(
-              'pb-5',
+              'pb-5 outline-none',
               isActiveTab
                 ? 'border-b-4 text-primary border-primary font-semibold'
                 : 'font-medium text-[#929292]'

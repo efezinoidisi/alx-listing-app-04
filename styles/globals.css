@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -41,6 +43,16 @@ body {
   /* overflow-x: hidden; */
   scroll-behavior: smooth;
   font-size: 1rem;
+  font-family: 'Quicksand', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 90rem;
+  margin-inline: auto;
+}
+
+.font-source-sans {
+  font-family: 'Source Sans 3', serif;
 }
 
 button,

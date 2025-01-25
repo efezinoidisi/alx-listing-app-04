@@ -21,6 +21,7 @@ export default {
           400: '#ECECEC',
           500: '#EBEBEB',
           600: '#EDEDED',
+          700: '#E7E6E6',
         },
         primary: '#34967C',
       },
@@ -36,10 +37,6 @@ export default {
       },
       backgroundImage: {
         hero: 'url("/assets/images/hero.webp")',
-      },
-      fontFamily: {
-        'quick-sand': ['var(--quick-sand)'],
-        'source-sans': ['var(--source-sans)'],
       },
       fontSize: {
         22: '22px',
