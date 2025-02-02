@@ -59,3 +59,8 @@ button,
 a {
   @apply text-nowrap;
 }
+
+.filter-primary {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(61%) saturate(431%)
+    hue-rotate(114deg) brightness(93%) contrast(82%);
+}
