@@ -1,10 +1,12 @@
 import AccomodationTypes from '@/components/common/AccomodationTypes';
 import Button from '@/components/common/Button';
-import Card from '@/components/common/Card';
 import Dropdown from '@/components/common/Dropdown';
 import Filter from '@/components/common/Filter';
 import Icons from '@/components/common/Icons';
-import { FILTERS, PROPERTYLISTINGSAMPLE } from '@/constants';
+import Listing from '@/components/property/Listing';
+import { FILTERS } from '@/constants';
+import useFetchListing from '@/utils/hooks/use-fetch-listings';
+import { Loader2 } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
     setCurrentFilter(value);
   };
 
+  const { listings, isLoading } = useFetchListing();
+
   const sortOptions = ['highest price', 'lowest price'];
 
   const [sortValue, setSortValue] = useState(sortOptions[0]);
@@ -21,14 +25,6 @@ export default function Home() {
   const handleSortValueChange = (value: string) => {
     setSortValue(value);
   };
-
-  const filteredListings = PROPERTYLISTINGSAMPLE.toSorted((itemA, itemB) => {
-    if (sortValue === 'lowest price') {
-      return itemA.price - itemB.price;
-    }
-
-    return itemB.price - itemA.price;
-  });
 
   return (
     <>
@@ -77,19 +73,14 @@ export default function Home() {
             />
           </div>
         </div>
-
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16 mt-9'>
-          {filteredListings.map((property) => (
-            <Card key={property.name} {...property} />
-          ))}
-        </div>
-
-        <div className='space-y-[1.125rem] flex flex-col justify-center items-center mt-[8.45rem] font-medium text-xl'>
-          <Button className='bg-secondary-100 text-white rounded-[61px] px-[32px] py-[13px]'>
-            Show more
-          </Button>
-          <p>Click to see more listings</p>
-        </div>
+        {isLoading ? (
+          <div className='grid place-items-center'>
+            <Loader2 className='animate-spin text-primary' />
+            <p>loading listing</p>
+          </div>
+        ) : (
+          <Listing listing={listings} sortValue={sortValue} />
+        )}
       </main>
     </>
   );

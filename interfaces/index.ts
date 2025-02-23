@@ -94,3 +94,8 @@ export interface PropertyTitleProps {
   country: string;
   className?: string;
 }
+
+export interface ListingProps {
+  listing: PropertyProps[];
+  sortValue: string;
+}
