@@ -3,10 +3,10 @@ import Button from '@/components/common/Button';
 import Dropdown from '@/components/common/Dropdown';
 import Filter from '@/components/common/Filter';
 import Icons from '@/components/common/Icons';
+import Loader from '@/components/common/Loader';
 import Listing from '@/components/property/Listing';
 import { FILTERS } from '@/constants';
 import useFetchListing from '@/utils/hooks/use-fetch-listings';
-import { Loader2 } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Home() {
@@ -74,10 +74,7 @@ export default function Home() {
           </div>
         </div>
         {isLoading ? (
-          <div className='grid place-items-center'>
-            <Loader2 className='animate-spin text-primary' />
-            <p>loading listing</p>
-          </div>
+          <Loader text='loading listing' />
         ) : (
           <Listing listing={listings} sortValue={sortValue} />
         )}

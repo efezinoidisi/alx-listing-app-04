@@ -1,4 +1,4 @@
-import useMediaQuery from '@/hooks/useMediaQuery';
+import useMediaQuery from '@/utils/hooks/use-media-query';
 import { formatDate } from '@/utils/utils';
 import { differenceInCalendarDays } from 'date-fns';
 import { useState } from 'react';
