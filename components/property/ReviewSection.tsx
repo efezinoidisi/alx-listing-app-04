@@ -1,12 +1,38 @@
 import { Review } from '@/interfaces';
+import axios from 'axios';
 import { format, formatDistance } from 'date-fns';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import Rating from '../common/Rating';
 
-const ReviewSection: React.FC<{ reviews: Review[]; rating: number }> = ({
-  reviews,
+const ReviewSection: React.FC<{ propertyId: string; rating: number }> = ({
+  propertyId,
   rating,
 }) => {
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await axios.get(
+          `/api/properties/${propertyId}/reviews`
+        );
+        setReviews(response.data.reviews);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchReviews();
+  }, [propertyId]);
+
+  if (loading) {
+    return <p>Loading reviews...</p>;
+  }
+
   return (
     <section className=''>
       <h3 className='text-2xl font-semibold sr-only'>Reviews</h3>

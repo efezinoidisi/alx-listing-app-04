@@ -99,3 +99,32 @@ export interface ListingProps {
   listing: PropertyProps[];
   sortValue: string;
 }
+
+export interface BookingDetails {
+  propertyName: string;
+  totalNights: number;
+  startDate: string;
+  bookingFee: number;
+  price: number;
+  rating: number;
+  totalReviews: number;
+  propertyImage: string;
+}
+
+export interface BookingFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  cardNumber: string;
+  expirationDate: string;
+  cvv: string;
+  billingAddress: {
+    street: string;
+    apartment: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+}

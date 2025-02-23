@@ -1,13 +1,41 @@
 import Loader from '@/components/common/Loader';
 import PropertyDetail from '@/components/property/PropertyDetail';
 import ReviewSection from '@/components/property/ReviewSection';
-import useFetchProperty from '@/utils/hooks/use-fetch-property';
+import { PropertyProps } from '@/interfaces';
+import axios from 'axios';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { toast } from 'sonner';
 
 export default function PropertyPage() {
   const router = useRouter();
   const { id } = router.query;
-  const { property, isLoading } = useFetchProperty({ id: id as string });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [property, setProperty] = useState<PropertyProps>();
+
+  useEffect(() => {
+    const fetchProperty = async () => {
+      setIsLoading(true);
+      try {
+        const res = await axios.get(`/api/properties/${id}`);
+        if (res.status === 200) {
+          setProperty(res.data.property);
+        } else {
+          toast.error('Failed to fetch property');
+        }
+      } catch (error) {
+        console.log(error);
+
+        toast.error('An unknown error has occured, please try again');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchProperty();
+  }, [id]);
+
   if (!property) return <p>Property not found</p>;
 
   const goBack = () => {
@@ -29,7 +57,7 @@ export default function PropertyPage() {
           >
             {property.reviews.length ? (
               <ReviewSection
-                reviews={property.reviews}
+                propertyId={id as string}
                 rating={property.rating}
               />
             ) : (

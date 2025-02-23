@@ -1,18 +1,10 @@
+import { BookingDetails } from '@/interfaces';
 import { format } from 'date-fns';
 import Image from 'next/image';
 import Rating from '../common/Rating';
 
 const OrderSummary: React.FC<{
-  bookingDetails: {
-    propertyName: string;
-    startDate: string;
-    totalNights: number;
-    bookingFee: number;
-    price: number;
-    rating: number;
-    totalReviews: number;
-    propertyImage: string;
-  };
+  bookingDetails: BookingDetails;
 }> = ({ bookingDetails }) => {
   const total = bookingDetails.bookingFee + bookingDetails.price;
 
